@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 const BASE_PATH = __DIR__ . '/../';
 
 require BASE_PATH . 'Core/functions.php';
@@ -21,13 +23,4 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 $router->route($uri, $method);
 
-//
-//
-//$id = ($_GET['id']);
-//$query = "SELECT * FROM `posts` WHERE id=:id";
-//
-//
-//
-//$posts = $db->query($query, [':id'=>$id])->fetch();
-//
 
