@@ -4,12 +4,11 @@ use Core\App;
 use Core\Database;
 use Core\Validator;
 
+$db = App::resolve(Database::class);
 $email = $_POST['email'];
-
 $password = $_POST['password'];
 
 $errors = [];
-
 if (!Validator::email($email)) {
     $errors['email'] = "Please provide a valid email address.";
 
@@ -24,7 +23,7 @@ if (!empty($errors)) {
         ["errors" => $errors]);
 }
 
-$db = App::resolve(Database::class);
+
 $user = $db->query("SELECT * FROM users WHERE email= :email",
     ["email" => $email])->find();
 
@@ -39,6 +38,9 @@ if ($user) {
     $_SESSION["user"] = [
         "email" => $email
     ];
+
+    login($user);
+
     header("Location:/");
     exit();
 }
