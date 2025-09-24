@@ -6,12 +6,17 @@
             "email": "wares.ahmad01@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/collections": "^12.31"
+    },
   "autoload": {
     "psr-4": {
       "Core\\": "Core/",
       "Http\\": "Http/"
     }
 
-  }
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.1"
+    }
 }
