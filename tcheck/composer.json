@@ -1,0 +1,17 @@
+{
+    "name": "wares/tcheck",
+    "authors": [
+        {
+            "name": "AresCodes01",
+            "email": "wares.ahmad01@gmail.com"
+        }
+    ],
+    "require": {},
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "Http\\": "Http/"
+    }
+
+  }
+}
