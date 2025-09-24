@@ -1,5 +1,10 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
+<?php
+//$errors = $_SESSION['errors'] ?? [];
+//$old = $_SESSION['old'] ?? [];
+//unset($_SESSION['errors'], $_SESSION['old']);
+//?>
 
 <main>
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">

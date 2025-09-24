@@ -1,5 +1,14 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
+<?php
+//if (session_status() === PHP_SESSION_NONE) session_start();
+//
+//$errors = $_SESSION['errors'] ?? [];
+//$old = $_SESSION['old'] ?? [];
+//
+//unset($_SESSION['errors'], $_SESSION['old']);
+//?>
+
 
 <main>
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -47,6 +56,7 @@
                     <?php if (isset($errors['password'])) : ?>
                         <li class="text-red-500 text-xs mt-2"><?= $errors['password'] ?></li>
                     <?php endif; ?>
+
                 </ul>
             </form>
         </div>
