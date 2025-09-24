@@ -1,13 +1,6 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
-<?php
-if (session_status() === PHP_SESSION_NONE) session_start();
 
-$errors = $_SESSION['errors'] ?? [];
-$old = $_SESSION['old'] ?? [];
-
-unset($_SESSION['errors'], $_SESSION['old']);
-?>
 
 
 <main>
