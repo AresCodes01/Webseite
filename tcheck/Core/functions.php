@@ -49,27 +49,8 @@ function redirect($path)
     header("location: {$path}  ");
     exit();
 }
-function formState($key = null)
+function old($key, $default = '')
 {
-    if (session_status() === PHP_SESSION_NONE) session_start();
-
-    $errors = $_SESSION['errors'] ?? [];
-    $old = $_SESSION['old'] ?? [];
-
-    unset($_SESSION['errors'], $_SESSION['old']);
-
-    // Wenn ein Schlüssel angegeben wurde
-    if ($key) {
-        return [
-            'old' => htmlspecialchars($old[$key] ?? ''),
-            'error' => $errors[$key] ?? null
-        ];
-    }
-
-    // Wenn kein Schlüssel, alles zurückgeben
-    return [
-        'old' => array_map('htmlspecialchars', $old),
-        'errors' => $errors
-    ];
+    return Core\Session::get('old')[$key] ?? $default;
 }
 
