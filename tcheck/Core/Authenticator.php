@@ -13,11 +13,11 @@ class Authenticator
         if ($user) {
 
             if (password_verify($password, $user['password'])) {
-               $this->login([
+                $this->login([
                     "email" => $email,
                 ]);
 
-               return true;
+                return true;
             }
 
         }

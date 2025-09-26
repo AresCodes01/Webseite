@@ -5,7 +5,6 @@ use Core\Validator;
 it('validates a string', function () {
 
 
-
     expect(Validator::string("foobar"))->tobeTrue();
     expect(Validator::string(false))->tobeFalse();
     expect(Validator::string(""))->toBeFalse();
@@ -17,7 +16,7 @@ it('validates a string with a minimum length', function () {
     $result = Validator::string("foobar");
 
 
-    expect(Validator::string("foobar",20))->toBeFalse();
+    expect(Validator::string("foobar", 20))->toBeFalse();
 });
 
 it("validates an email address", function () {

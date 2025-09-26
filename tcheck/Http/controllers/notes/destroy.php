@@ -8,20 +8,20 @@ $db = App::resolve(Database::class);
 
 $currentUserId = 1;
 
-    $note = $db->query('select * from notes where id = :id', [
-        'id' => $_POST['id']
-    ])->findOrFail();
+$note = $db->query('select * from notes where id = :id', [
+    'id' => $_POST['id']
+])->findOrFail();
 
 
-    authorize($note['user_id']=== $currentUserId);
-    //form was submitted delete the current note.
+authorize($note['user_id'] === $currentUserId);
+//form was submitted delete the current note.
 
-    $db->query("delete from notes where id =:id", [
-        'id' => $_POST['id']
-    ]);
+$db->query("delete from notes where id =:id", [
+    'id' => $_POST['id']
+]);
 
 
-    header('Location: /notes');
-    exit();
+header('Location: /notes');
+exit();
 
 

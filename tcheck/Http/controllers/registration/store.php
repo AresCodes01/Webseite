@@ -19,7 +19,8 @@ if (!Validator::string($password, 7, 255)) {
     $errors['password'] = "Please provide a password of at least 7 characters.";
 }
 
-if (!empty($errors)) {$_SESSION['errors'] = $errors;
+if (!empty($errors)) {
+    $_SESSION['errors'] = $errors;
     $_SESSION['old'] = ['email' => $email]; // alte Eingabe merken
     return redirect("/register"); // zurück zum Formular
 }

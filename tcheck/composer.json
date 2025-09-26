@@ -1,22 +1,21 @@
 {
-    "name": "wares/tcheck",
-    "authors": [
-        {
-            "name": "AresCodes01",
-            "email": "wares.ahmad01@gmail.com"
-        }
-    ],
-    "require": {
-        "illuminate/collections": "^12.31"
-    },
+  "name": "wares/tcheck",
+  "authors": [
+    {
+      "name": "AresCodes01",
+      "email": "wares.ahmad01@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/collections": "^12.31"
+  },
   "autoload": {
     "psr-4": {
       "Core\\": "Core/",
       "Http\\": "Http/"
     }
-
-    },
-    "require-dev": {
-        "pestphp/pest": "^4.1"
-    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^4.1"
+  }
 }

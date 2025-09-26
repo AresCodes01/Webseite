@@ -13,10 +13,10 @@
                            class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                         <a href="/about"
                            class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-                       <?php if ($_SESSION["user"]?? false) :?>
-                        <a href="/notes"
-                           class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notes</a>
-                      <?php endif; ?>
+                        <?php if ($_SESSION["user"] ?? false) : ?>
+                            <a href="/notes"
+                               class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notes</a>
+                        <?php endif; ?>
                         <a href="/contact"
                            class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
@@ -71,13 +71,14 @@
                     <?php if ($_SESSION["user"] ?? false) : ?>
                         <div class="relative ml-3">
                             <form method="POST" action="/session">
-                            <input type="hidden" name="_method" value="DELETE"/>
+                                <input type="hidden" name="_method" value="DELETE"/>
 
-                            <button class="text-white">Log Out</button>
+                                <button class="text-white">Log Out</button>
                             </form>
-<!--                            <a href="/logout"-->
-<!--                               class="--><?php //= urlIs('/logout') ? 'bg-gray-900 text-white' : 'text-gray-300' ?><!-- hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"-->
-<!--                            >Log Out</a>-->
+                            <!--                            <a href="/logout"-->
+                            <!--                               class="-->
+                            <?php //= urlIs('/logout') ? 'bg-gray-900 text-white' : 'text-gray-300' ?><!-- hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"-->
+                            <!--                            >Log Out</a>-->
 
                         </div>
                     <?php endif; ?>
@@ -110,10 +111,10 @@
                class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
             <a href="/about"
                class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-            <?php if ($_SESSION["user"]?? false) :?>
-            <a href="/notes"
-               class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notes</a>
-           <?php endif;?>
+            <?php if ($_SESSION["user"] ?? false) : ?>
+                <a href="/notes"
+                   class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notes</a>
+            <?php endif; ?>
             <a href="/contact"
                class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
