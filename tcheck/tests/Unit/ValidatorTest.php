@@ -28,4 +28,5 @@ it("validates an email address", function () {
 it("validates that a number is greater than a given amount", function () {
     expect(Validator::greaterThan(10, 1))->toBeTrue();
     expect(Validator::greaterThan(0, 10))->toBeFalse();
+
 })->only();
